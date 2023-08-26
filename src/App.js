@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from "react";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import MovieList from './component/movieList';
 import MovieDetail from './component/moviDetails';
 function App() {
@@ -45,12 +45,10 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
       <Routes>
         <Route path='/' element={<MovieList films={films}/>}/>
         <Route path='/movie/:id' element={<MovieDetail films={films}/>}/>
       </Routes>
-    </BrowserRouter>
     </>
   );
 }
